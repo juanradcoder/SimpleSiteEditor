@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title data-react-helmet="true">Admin</title>
+			<style id="base-styles">/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}*{box-sizing:border-box}body,html{height:100%;margin:0}body{overflow:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}a{cursor:pointer;text-decoration:none}@font-face{format('woff2'),url(/assets/admin/fonts/opensans/OpenSans-Regular.woff) format('ttf');font-weight:400;font-style:normal;font-display:swap} format('woff2'),url(/assets/admin/fonts/opensans/OpenSans-SemiBold.woff) format('woff'),url(/assets/admin/fonts/opensans/OpenSans-SemiBold.ttf) format('ttf');font-weight:600;font-style:normal;font-display:swap}@font-face{font-family:Sonny;src:url(/assets/admin/fonts/wfoundry_sonny/cond_black.woff2) format('woff2'),url(/assets/admin/fonts/wfoundry_sonny/cond_black.woff) format('woff'),url(/assets/admin/fonts/wfoundry_sonny/cond_black.otf) format('otf'),url(/assets/admin/fonts/wfoundry_sonny/cond_black.ttf) format('ttf');font-weight:400;font-style:normal;font-display:swap}body{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:16px;line-height:24px;color:#333}small{font-size:12px;line-height:18px}a,a:visited{font-weight:400;color:#007885}a:active,a:focus,a:hover{color:#005b6c}h1{font-family:Sonny,"Avenir Next","Arial Black",sans-serif;font-size:24px;line-height:32px;color:#007885;text-transform:uppercase}h2{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:20px;line-height:28px;color:#333;text-transform:uppercase}h3{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:18px;line-height:28px;color:#333;text-transform:uppercase}h4{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:16px;line-height:20px;color:#333;text-transform:none}h5{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:14px;line-height:20px;color:#333;text-transform:none}h6{font-family:"Open Sans",sans-serif,Helvetica,Arial;font-size:16px;line-height:20px;color:#333;text-transform:none}@media only screen and (min-width:1200px){body{font-size:16px;line-height:24px}h1{font-size:32px;line-height:40px}h2{font-size:24px;line-height:36px}h3{font-size:20px;line-height:28px}h4{font-size:18px;line-height:24px}h5{font-size:16px;line-height:20px}h6{font-size:18px;line-height:24px}}p{margin:0 0 1.25em}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="KEYFRAME">@-webkit-keyframes k1{0.6%{transform:scale(1.3) rotate(20deg)}1.2%, 15.0%{transform:none}15.6%{transform:scale(1.3) rotate(20deg)}16.2%, 100.0%{transform:none}}@-moz-keyframes k1{0.6%{transform:scale(1.3) rotate(20deg)}1.2%, 15.0%{transform:none}15.6%{transform:scale(1.3) rotate(20deg)}16.2%, 100.0%{transform:none}}@keyframes k1{0.6%{transform:scale(1.3) rotate(20deg)}1.2%, 15.0%{transform:none}15.6%{transform:scale(1.3) rotate(20deg)}16.2%, 100.0%{transform:none}}@-webkit-keyframes k2{0%{opacity:0;transform:translateY(40px)}80%{opacity:1}100%{transform:translateY(0px)}}@-moz-keyframes k2{0%{opacity:0;transform:translateY(40px)}80%{opacity:1}100%{transform:translateY(0px)}}@keyframes k2{0%{opacity:0;transform:translateY(40px)}80%{opacity:1}100%{transform:translateY(0px)}}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE">._1o44zq6{width:100%;max-width:1140px;margin:0 auto;display:block !important}._17l1hcm{flex:1 1 auto;box-sizing:border-box}._wa8g8n{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;height:100%;width:100%;flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-wrap:wrap;-webkit-box-lines:multiple;box-sizing:border-box}._zdxht7{width:100%}._sh1jxl{flex:1 1 0;box-sizing:border-box}._1w07dsz{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;-webkit-box-align:center;justify-content:space-between;-webkit-box-pack:justify;position:relative;width:100%;height:50px;padding:10px 0}._kh8dwt{margin-right:20px}._11mhmpl{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;justify-content:space-between;-webkit-box-pack:justify}._12jxaxr{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;-webkit-box-align:center}._16fofwo{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;align-items:center;-webkit-box-align:center}._1qrv64{margin-left:15px}._dnpxte{display:none}._151o5h{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;justify-content:center;-webkit-box-pack:center;align-items:center;-webkit-box-align:center;flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;text-transform:uppercase;font-size:10px;line-height:1;color:#333333 !important}._xoohpf{animation:k1 36s 2s linear infinite;position:relative;top:-10px}._1ejackt{border:1px solid #D4D9D8;padding:45px 15px 30px !important}._4cyr6n{padding:0 !important}._1yvelng::after{position:absolute;left:50%;transform:translateX(-50%);content:&quot;&quot;;bottom:calc(100% - 1px);width:0;height:0;border-width:0 8px 7px 8px;border-style:solid;border-top-color:transparent;border-right-color:transparent;border-bottom-color:#fff;border-left-color:transparent}._1yvelng::before{position:absolute;left:50%;transform:translateX(-50%);content:&quot;&quot;;bottom:100%;width:0;height:0;border-width:0 8px 7px 8px;border-style:solid;border-top-color:transparent;border-right-color:transparent;border-bottom-color:#D4D9D8;border-left-color:transparent}._1yvelng{background-color:white;border:1px solid #D4D9D8;width:360px !important;max-width:100%;padding:20px;padding-top:50px;animation:k2 0.3s ease-in-out;opacity:1;transform:translateY(0px);transition:opacity 0.5s, transform 0.5s;-webkit-transition:opacity 0.5s, transform 0.5s;-moz-transition:opacity 0.5s, transform 0.5s;border-radius:3px}._5pwda1{outline:none;margin-top:10px}._1foq6l1{opacity:0;transform:translateY(-40px)}._1ognjos{position:fixed;background:none !important;bottom:auto;right:auto;z-index:200}._1garb19&gt; svg{display:block;width:16px;height:16px}._1garb19{cursor:pointer;position:absolute;top:15px;right:15px;padding:5px;border-radius:100%;border:none;background-color:transparent;outline:none;z-index:1;transition:background-color 250ms;-webkit-transition:background-color 250ms;-moz-transition:background-color 250ms}._w5csxj{margin-left:15px;cursor:pointer;padding:6px 0;border:0;outline:none;background:#fff}._uhlm2{display:block}._1u7qptv{margin-bottom:30px}._g6etj7{position:fixed;top:0;right:0;bottom:0;left:0;z-index:101;background-color:rgba(0,0,0,0.5);visibility:hidden;opacity:0;transition:visibility 0ms 300ms, opacity 300ms 0ms;-webkit-transition:visibility 0ms 300ms, opacity 300ms 0ms;-moz-transition:visibility 0ms 300ms, opacity 300ms 0ms}._1ppzpg8{visibility:visible;opacity:1;transition:visibility 0ms 0ms, opacity 300ms 0ms;-webkit-transition:visibility 0ms 0ms, opacity 300ms 0ms;-moz-transition:visibility 0ms 0ms, opacity 300ms 0ms}._9h2sen{overflow:auto;position:absolute;top:0;right:0;bottom:0;width:290px;padding:15px;opacity:0;background-color:#fff;transform:translateX(10%);transition:all 300ms;-webkit-transition:all 300ms;-moz-transition:all 300ms}._4i0nj4{opacity:1;transform:translateX(0);transition:all 300ms 100ms;-webkit-transition:all 300ms 100ms;-moz-transition:all 300ms 100ms}._qiz95j{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-direction:row-reverse;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;align-items:center;-webkit-box-align:center;margin-bottom:30px}._1dqv0xg{margin:0 15px 0 0;flex:1 0 auto}._1eaes69{flex:0 0 auto}._1gv9e7a{width:100%;margin-bottom:20px}._fhnibg{border-top:solid 1px #D4D9D8;margin-top:30px;padding:30px 0}._1garb19:hover{background-color:rgba(0, 0, 0, 0.1)}._1garb19:focus{background-color:rgba(0, 0, 0, 0.1)}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE" media="only screen and (min-width: 0px)">._1o44zq6{padding-left:10px;padding-right:10px}._1w1ki09{flex-basis:100%;max-width:100%}._1ky0xmv{margin-right:-7.5px;margin-left:-7.5px}._1n8vnie{flex-basis:100%;max-width:100%}._1dtb3pj{padding-right:7.5px;padding-left:7.5px}._17lb9t2{flex-basis:100%;max-width:100%}._5necdv{flex-basis:100%;max-width:100%}._7y64li{flex-basis:100%;max-width:100%}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE" media="only screen and (min-width: 768px)">._1o44zq6{padding-left:15px;padding-right:15px}._1w07dsz{height:60px}._11mhmpl{width:100%}._1k2iieh{display:none }._151o5h{display:none }._w5csxj{padding:10px 0}._9h2sen{width:375px;padding:15px 30px 30px}._1ky0xmv{margin-right:-15px;margin-left:-15px}._1n8vnie{flex-basis:25%;max-width:25%}._1dtb3pj{padding-right:15px;padding-left:15px}._17lb9t2{flex-basis:75%;max-width:75%}._5necdv{flex-basis:100%;max-width:100%}._7y64li{flex-basis:50%;max-width:50%}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE" media="only screen and (min-width: 1200px)">._1o44zq6{padding-left:20px;padding-right:20px}._1w07dsz{height:80px}._1qrv64{display:none}._dnpxte{display:inline-block}._w5csxj{display:none}._g6etj7{display:none}._1ky0xmv{margin-right:-15px;margin-left:-15px}._1dtb3pj{padding-right:15px;padding-left:15px}._5necdv{flex-basis:50%;max-width:50%}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE" media="only screen and (max-width: 1199px)">._11wc4y1{display:none  !important}._1qe4t8o{overflow:hidden}</style>
+			<style type="text/css" data-fela-hydration="0" data-fela-type="RULE" media="only screen and (max-width: 767px)">._12jxaxr{display:none }</style>
+			<style data-emotion-css="0 1svvr0w nhnkxe 12phpro bl3lvp o5ddey ahtp6x 1s56ibj 1xsbl99 1xpvh4k 1hx8rga 18ahhay 1uim3l4 rolvln 2wnvio 1tu7vj9 mfqx1e r9riq1 1gfechk pgek3s e56icz l6sbu8 czhxij x7lncw jmlygb 79elbk 1hdbuy3 ium7el 8wbo23 1w0v0ic 1gre11u jk3xxt 10aedm4 px14qk 1coxjra o3axpv 1fdplv 15poin4 rhdjtj 1ttxulj 1kap4ic 19t2ho9 ba50a2 ogt6wk 1aetpfc 1rel3yw 3dzw9a 1tiqlfo x5pbbq 913gj 1uk1gs8 1b1zfbw 10ib5jr noc5mh 1h7h53f 1eyech1 6muuyw 1xnek07 ryzurm 8q2c91 hoe9xz 14dv0kx 1fb3fgn 1nicsrk 8t5trv 1ybc1vy 103yau8 3nm7jb j7qwjs 8rqnxx s8yd32 vizkrw xuxlv kr72fk jwkclt 1nm9kc7">.css-1svvr0w{height:0;}.css-nhnkxe{position:fixed;width:100%;top:0px;-webkit-transition:-webkit-transform .5s;-webkit-transition:transform .5s;transition:transform .5s;background-color:white;box-shadow:0 1px 0 0 rgba(77,65,51,0.05);z-index:105;}.css-12phpro{display:block;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:132px;}@media only screen and (min-width:1200px){.css-12phpro{width:220px;}}.css-bl3lvp{display:block;height:100%;width:100%;}.css-o5ddey{display:inline-block;position:relative;cursor:pointer;}.css-o5ddey:hover [fill="#000"]{fill:#007885;}.css-o5ddey:hover [stroke="#000"]{stroke:#007885;}.css-ahtp6x{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:8px 15px;border-radius:3px;font-size:16px;font-weight:600;font-family:"Open Sans",sans-serif,"Helvetica","Arial";line-height:24px;text-transform:uppercase;-webkit-text-decoration:none;text-decoration:none;color:#333333;}.css-ahtp6x:hover{color:#007885;}.css-1s56ibj{display:inline-block;position:relative;cursor:pointer;}@media only screen and (max-width:1199px){.css-1s56ibj{display:none;}}.css-1s56ibj:hover [fill="#000"]{fill:#007885;}.css-1s56ibj:hover [stroke="#000"]{stroke:#007885;}@media only screen and (max-width:1199px){.css-1xsbl99{display:none;}}.css-1xpvh4k{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:600;font-size:16px;border-radius:3px;height:40px;padding:0 15px;cursor:pointer;}@media only screen and (max-width:1199px){.css-1xpvh4k{display:none;}}.css-1hx8rga{vertical-align:middle;box-sizing:content-box;cursor:default;}.css-18ahhay{vertical-align:middle;box-sizing:content-box;cursor:default;margin-left:10px;width:12px;height:8px;}.css-1uim3l4{vertical-align:middle;box-sizing:content-box;cursor:pointer;}.css-rolvln{display:block;position:relative;margin-bottom:15px;}.css-rolvln:last-child{margin-bottom:0;}.css-2wnvio{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:16px;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#333333;}.css-1tu7vj9{vertical-align:middle;box-sizing:content-box;cursor:default;width:24px;margin-right:10px;}.css-1tu7vj9 [fill="#000"]{fill:#333333;}.css-1tu7vj9 [stroke="#000"]{stroke:#333333;}.css-mfqx1e{border-top:1px solid #D4D9D8;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:30px;}h3.css-r9riq1{margin-bottom:15px;}.css-1gfechk{text-align:center;margin-left:-15px;margin-right:-15px;}@media only screen and (min-width:768px){.css-1gfechk{margin-left:0;margin-right:0;}}.css-pgek3s{margin-left:3px;margin-right:3px;}@media only screen and (min-width:768px){.css-pgek3s{margin-left:5px;margin-right:5px;}}.css-e56icz{display:inline-block;vertical-align:bottom;width:auto;height:40px;}.css-l6sbu8{position:relative;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FFFFFF;min-height:100px;}.css-czhxij{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;background-color:#FAFAFA;}.css-x7lncw{position:-webkit-sticky;position:sticky;z-index:2;top:0;box-shadow:0 2px 0 0 rgba(51,51,51,0.1);}@media only screen and (min-width:768px){.css-x7lncw{display:none;}}.css-jmlygb{display:block;position:relative;cursor:pointer;padding:5px 15px;background-color:#fff;border-radius:3px;}@media only screen and (max-width:1199px){.css-jmlygb{font-size:12px;line-height:13px;}}.css-79elbk{position:relative;}.css-1hdbuy3{position:relative;padding:10px 15px;outline:none;padding-right:25px;}.css-ium7el{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.css-8wbo23{vertical-align:middle;box-sizing:content-box;cursor:default;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;margin-right:10px;}.css-1w0v0ic{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;word-break:break-word;}.css-1gre11u{vertical-align:middle;box-sizing:content-box;cursor:default;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);right:2px;}.css-jk3xxt{display:none;}@media only screen and (min-width:768px){.css-jk3xxt{display:block;margin-top:70px;}}@media only screen and (min-width:1200px){.css-jk3xxt{margin-top:100px;}}a.css-10aedm4{display:block;margin-bottom:30px;font-weight:600;color:#007885;}a.css-10aedm4:hover{color:#007885;}a.css-px14qk{display:block;margin-bottom:30px;font-weight:600;color:#333333;}a.css-px14qk:hover{color:#007885;}.css-1coxjra{color:#007885;font-family:"Sonny","Avenir Next","Arial Black",sans-serif;text-transform:uppercase;font-size:24px;line-height:32px;margin:15px 0;}@media only screen and (min-width:1200px){.css-1coxjra{font-size:32px;line-height:40px;margin:30px 0;}}.css-o3axpv{background:#FFFFFF;border-radius:3px;margin-bottom:30px;padding:15px;box-shadow:0 2px 0 #D4D9D8;}@media only screen and (min-width:768px){.css-o3axpv{padding:30px;}}.css-1fdplv{font-size:16px;line-height:1.5em;}@media only screen and (max-width:1199px){.css-1fdplv{font-size:12px;line-height:1.43em;}}.css-15poin4{margin-bottom:15px;}.css-rhdjtj{margin-top:0;margin-bottom:15px;}@media only screen and (min-width:768px){.css-rhdjtj{margin-bottom:20px;}}.css-1ttxulj:first-child{margin-bottom:30px;}@media only screen and (min-width:768px){.css-1ttxulj:first-child{margin-bottom:0;}}.css-1kap4ic{margin:0 0 15px 0;}.css-19t2ho9{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;}.css-ba50a2{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;height:40px;border-radius:3px;line-height:2.1;font-size:18px;margin-right:15px;max-width:50%;font-weight:600;text-align:center;color:white;background-color:#007885;border:1px solid #007885;cursor:pointer;}@media only screen and (min-width:768px){.css-ba50a2{width:60px;}}@media only screen and (min-width:1200px){.css-ba50a2{width:40px;-webkit-flex:none;-ms-flex:none;flex:none;}}.css-ogt6wk{vertical-align:middle;box-sizing:content-box;cursor:default;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border:2px solid;position:absolute;top:2px;right:2px;-webkit-transform:translate(50%,-50%);-ms-transform:translate(50%,-50%);transform:translate(50%,-50%);background-color:#16BECF;border-radius:50%;}.css-1aetpfc{position:relative;-webkit-flex:1;-ms-flex:1;flex:1;height:40px;border-radius:3px;line-height:2.1;font-size:18px;margin-right:15px;max-width:50%;font-weight:600;text-align:center;color:#007885;background-color:transparent;border:1px solid #007885;cursor:pointer;}@media only screen and (min-width:768px){.css-1aetpfc{width:60px;}}@media only screen and (min-width:1200px){.css-1aetpfc{width:40px;-webkit-flex:none;-ms-flex:none;flex:none;}}.css-1rel3yw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;border:1px;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;}@media only screen and (min-width:768px){.css-1rel3yw{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}.css-3dzw9a{background-color:#F5FAFA;border-radius:6px;padding:15px 15px 0 15px;margin-top:30px;}@media only screen and (min-width:768px){.css-3dzw9a{margin-top:0;}}.css-1tiqlfo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:15px;}.css-1tiqlfo:first-child{margin-bottom:10px;}.css-x5pbbq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:15px;border-top:1px solid #AFB3B2;padding-top:15px;font-weight:600;font-size:16px;line-height:20px;}.css-x5pbbq:first-child{margin-bottom:10px;}@media only screen and (min-width:1200px){.css-x5pbbq{font-size:18px;line-height:24px;}}.css-913gj{position:relative;font-weight:600;padding-bottom:20px;}.css-1uk1gs8{margin:0;}.css-1b1zfbw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}.css-10ib5jr{margin-bottom:40px;}.css-noc5mh{margin:0 0 0.25em;}.css-1h7h53f{width:auto;border-width:2px;border-radius:3px;border-style:solid;cursor:pointer;opacity:1;display:inline-block;text-align:center;padding-left:20px;padding-right:20px;-webkit-transition:padding-right 0.3s ease,opacity 0.3s;transition:padding-right 0.3s ease,opacity 0.3s;font-weight:600;font-family:"Open Sans",sans-serif,"Helvetica","Arial";font-size:18px;min-width:100px;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;position:relative;height:40px;line-height:35px;background-color:transparent;color:#007885;border-color:#007885;min-width:100px;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}.css-1h7h53f:active,.css-1h7h53f:focus{outline:none;}.css-1h7h53f:visited{color:#007885;}@media (hover:hover){.css-1h7h53f:not([disabled]):hover,.css-1h7h53f:not([disabled]):focus{background-color:#007885;border-color:#007885;color:white;}.css-1h7h53f:not([disabled]):active{background-color:#004552;border-color:#004552;color:white;}}.css-1h7h53f:disabled{opacity:.3;cursor:default;}@media only screen and (min-width:0px) and (max-width:767px){.css-1h7h53f{width:100%;margin-top:30px;}}.css-1eyech1{margin:0 0 0.35em;}.css-6muuyw{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}@media only screen and (min-width:768px){.css-6muuyw{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;}}.css-1xnek07{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;margin-bottom:20px;}@media only screen and (min-width:768px){.css-1xnek07{margin:0 20px 0 0;}}.css-ryzurm{width:auto;border-width:2px;border-radius:3px;border-style:solid;cursor:pointer;opacity:1;display:inline-block;text-align:center;padding-left:20px;padding-right:20px;-webkit-transition:padding-right 0.3s ease,opacity 0.3s;transition:padding-right 0.3s ease,opacity 0.3s;font-weight:600;font-family:"Open Sans",sans-serif,"Helvetica","Arial";font-size:18px;min-width:100px;-webkit-text-decoration:none;text-decoration:none;text-transform:uppercase;position:relative;height:50px;line-height:46px;background-color:transparent;color:#333333;border-color:#333333;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;}.css-ryzurm:active,.css-ryzurm:focus{outline:none;}@media only screen and (min-width:1200px){.css-ryzurm{height:50px;line-height:46px;}}@media (hover:hover){.css-ryzurm:not([disabled]):hover,.css-ryzurm:not([disabled]):focus{background-color:#333333;border-color:#333333;color:white;}.css-ryzurm:not([disabled]):active{background-color:#4B4D4C;border-color:#4B4D4C;color:white;}}.css-ryzurm:disabled{opacity:.3;cursor:default;}@media only screen and (min-width:768px){.css-ryzurm{-webkit-flex-basis:auto;-ms-flex-preferred-size:auto;flex-basis:auto;}}.css-ryzurm:visited{color:unset;}.css-8q2c91{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:40px;}.css-hoe9xz{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}.css-14dv0kx{padding:30px 15px;}@media only screen and (min-width:768px){.css-14dv0kx{padding:30px;}}@media only screen and (min-width:1200px){.css-14dv0kx{padding-top:45px;padding-bottom:45px;}}.css-1fb3fgn{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:-5px;}@media only screen and (min-width:768px){.css-1fb3fgn{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}}.css-1nicsrk{-webkit-flex:1 1 50%;-ms-flex:1 1 50%;flex:1 1 50%;padding:15px 5px;}@media only screen and (min-width:768px){.css-1nicsrk{-webkit-flex:1 1 25%;-ms-flex:1 1 25%;flex:1 1 25%;padding:15px 10px;}}h3.css-8t5trv{margin-top:0;margin-bottom:15px;}a.css-1ybc1vy{display:block;cursor:pointer;font-weight:normal;color:#333333;}@media only screen and (max-width:767px){.css-103yau8{width:100%;}}.css-3nm7jb{margin-right:20px;}.css-3nm7jb:last-child{margin-right:0;}.css-j7qwjs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.css-8rqnxx:not(:last-child){margin-bottom:10px;}@media only screen and (min-width:768px){.css-8rqnxx:not(:last-child){margin-bottom:20px;}}.css-s8yd32{height:2px;background:#D4D9D8;}.css-vizkrw{padding:26px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}@media only screen and (max-width:767px){.css-vizkrw{display:block;}}.css-vizkrw a{color:#333333 !important;font-weight:normal !important;}.css-xuxlv{display:block;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:132px;display:block;width:180px;}@media only screen and (min-width:1200px){.css-xuxlv{width:220px;}}@media only screen and (max-width:767px){.css-xuxlv{text-align:center;margin:0 auto 10px;}}@media only screen and (max-width:1199px){.css-xuxlv{width:134px;}}.css-kr72fk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:14px;}@media only screen and (max-width:767px){.css-kr72fk{display:block;text-align:center;}}.css-jwkclt{margin-right:30px;}@media only screen and (max-width:767px){.css-jwkclt{margin-right:0;}.css-jwkclt:not(:first-child):before{content:"|";margin:0 10px;}}@media only screen and (max-width:767px){.css-1nm9kc7{display:block;margin-top:5px;}}</style>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		  <link rel="stylesheet" href="admin/js/jquery/jquery-ui.css">
+		  <!--link rel="stylesheet" href="/resources/demos/style.css"-->			
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			<script src="admin/js/admin-vue.js"></script> 
+		</head>
+		<body>
+			<section style="display:flex;flex-direction:column;min-height:100%" role="main" id="root">
+				<header class="css-1svvr0w">
+					<div class="css-nhnkxe">
+						<div role="grid" class="_17l1hcm _1o44zq6">
+							<div class="_wa8g8n" role="row">
+								<div role="cell" class="_sh1jxl _1w1ki09">
+									<div>
+										<div class="_1w07dsz">
+											<div><img src="admin/img/icon.png" style="height:50px;"></div>
+											<h5><a href="">Preview Site</a></h5>
+											<h5><a href="login.html">Log out </a></h5>
+										</div>								
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<main id="main" class="css-l6sbu8">
+					<div class="css-czhxij">
+						<div role="grid" class="_17l1hcm _1o44zq6">
+							<div class="_wa8g8n" role="row">
+								<div role="cell" class="_sh1jxl _1w1ki09">
+									<div role="grid" class="_17l1hcm _1ky0xmv">
+										<div class="_wa8g8n" role="row">
+											<div role="cell" class="_sh1jxl">
+												<div class="css-jk3xxt">
+													<a class="css-10aedm4" role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('d')">DEMOS</span>
+														</div>
+													</a>
+													<a class="css-10aedm4" role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('p')">CURRENT PROJECTS</span>
+														</div>
+													</a>													
+													<a class="css-10aedm4" role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('t')">TESTIMONIALS</span>
+														</div>
+													</a>
+													<a class="css-10aedm4" role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('a')">ABOUT</span>
+														</div>
+													</a>
+													<a class="css-10aedm4"  role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('c')">CONTACT</span>
+														</div>
+													</a>
+													<a class="css-10aedm4" role="link">
+														<div class="css-ium7el">
+															<span class="css-1w0v0ic" v-on:click="toggleEditMenu('f')">FAQ</span>
+														</div>
+													</a>													
+												</div>
+											</div>											
+											<hr>
+											<div id="d" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px;">	
+												<h4 class="css-1coxjra">DEMOS</h4>
+												<p>Demos are displayed in the order that they are created.</p>
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw" style="display: inline;">
+																<div>
+																	<a class="css-1h7h53f" role="button"  v-on:click="openDemoDialog">
+																		<span>ADD DEMO</span>
+																	</a>
+																	<hr>
+																</div>
+																<div>
+																	<div v-for="item in demoList">
+																		<div style="padding: 2px 2px 2px 2px;">
+																			<b>{{"URL: "}}</b>{{ item.url}}
+																		</div>
+																		<div style="padding: 2px 2px 2px 2px;">
+																			<b>{{"Title: "}}</b>{{ item.title }}
+																		</div>																		
+																		<div style="padding: 2px 2px 2px 2px;">
+																			<b>{{"Description: "}}</b>{{ item.description }}
+																		</div>
+																		<div style="padding: 2px 2px 2px 2px;">
+																			<a style="color:blue;" v-on:click="editDEMO(item)">Update</a>
+																			<a style="color:red;" v-on:click="deleteDEMO(item)">Delete</a><br>
+																		</div>
+																		<hr>
+																	</div>
+																</div>	
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>
+											<div id="p" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px; display:none">
+												<h2 data-test-title="true" class="css-1coxjra">CURRENT PROJECTS</h2>
+												<p>Projects are displayed in the order that they are created.</p>
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw" style="display: inline;">
+																<div>
+																	<h4 class="css-noc5mh">No projects</h4>
+																</div>
+																<a class="css-1h7h53f" v-on:click="openProjectDialog">
+																	<span>ADD A PROJECT</span>
+																</a>
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>
+											<div id="t" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px; display:none">
+												<h2 data-test-title="true" class="css-1coxjra">TESTIMONIALS</h2>
+												<p>Testimonials are displayed in the order that they are created.</p>
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw" style="display: inline;">
+																<div>
+																	<h4 class="css-noc5mh">No testimonials</h4>
+																</div>
+																<a class="css-1h7h53f" v-on:click="openTestimonialDialog">
+																	<span>ADD A TESTIMONIAL</span>
+																</a>
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>
+											<div id="a" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px; display:none">
+												<h2 data-test-title="true" class="css-1coxjra">ABOUT</h2>
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw">
+																<span><b>About Text: </b></span>
+																<div>
+																	<textarea id="about_textarea" name="about_textarea" v-model="about_textarea" rows="8" cols="90">{{ about_textarea }}</textarea>
+																</div>
+																<a class="css-1h7h53f" role="button" v-on:click="saveAbout">
+																	<span>SAVE</span>
+																</a>
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>
+											<div id="c" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px; display:none">
+												<h2 data-test-title="true" class="css-1coxjra">CONTACT</h2>
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw">
+																<span><b>Contact Text: </b></span>
+																<div>
+																	<textarea id="contact_textarea" name="contact_textarea" v-model="contact_textarea" rows="8" cols="90">{{ contact_textarea }}</textarea>
+																</div>
+																<a class="css-1h7h53f" role="button" v-on:click="saveContact">
+																	<span>SAVE</span>
+																</a>
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>	
+											<div id="f" role="cell" class="_sh1jxl _1dtb3pj _17lb9t2" style="margin-top: 70px; display:none">
+												<h2 data-test-title="true" class="css-1coxjra">FAQ</h2>	
+												<p>FAQ's are displayed in the order that they are created.</p>												
+												<div class="css-0">
+													<section class="css-o3axpv">
+														<div class="css-1fdplv">
+															<section class="css-1b1zfbw" style="display: inline;">
+																<div>
+																	<a class="css-1h7h53f" role="button"  v-on:click="openFAQDialog">
+																		<span>ADD FAQ</span>
+																	</a>
+																	<hr>
+																</div>
+																<div>
+																	<div v-for="item in faqList">
+																		<div style="padding: 2px 2px 2px 2px;">
+																			{{"Q: "}}{{ item.question}}
+																		</div>
+																		<div style="padding: 2px 2px 2px 2px;">
+																			{{"A: "}}{{ item.answer }}
+																		</div>
+																		<div style="padding: 2px 2px 2px 2px;">
+																			<a style="color:red;" v-on:click="deleteFAQ(item)">Delete</a><br>
+																		</div>
+																		<hr>
+																	</div>
+																</div>															
+															</section>
+														</div>
+													</section>
+												</div>
+											</div>												
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="demoDialog" title="ADD A DEMO" style="display:none">
+					  <span>{{ "URL: "}}</span><span><input type="text" size="86" v-model="demoInput.url"></span><br><br>
+					  <span>{{ "Title:   "}}</span><span><input type="text" size="86" v-model="demoInput.title"></span><br><br>
+					  <span>{{ "Description:   "}}</span><span><input type="text" size="86" v-model="demoInput.description"></span><br><br>
+					  <button class="ui-button ui-widget ui-corner-all" v-on:click="saveDEMO">Save</button>
+					  <button class="ui-button ui-widget ui-corner-all" v-on:click="clearDEMO">Clear</button><br>
+					</div>						
+					<div id="projectDialog" title="ADD A PROJECT" style="display:none">
+					  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+					</div>						
+					<div id="testimonialDialog" title="ADD A TESTIMONIAL" style="display:none">
+					  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+					</div>					
+					<div id="faqDialog" title="ADD FAQ" style="display:none">
+					  <span>{{ "Question: "}}</span><span><input type="text" size="86" v-model="faqInput.question"></span><br>
+					  <span>{{ "Answer:   "}}</span><span><input type="text" size="86" v-model="faqInput.answer"></span><br><br>
+					  <button class="ui-button ui-widget ui-corner-all" v-on:click="saveFAQ">Save</button>
+					  <button class="ui-button ui-widget ui-corner-all" v-on:click="clearFAQ">Clear</button><br>
+					</div>
+					<div id="alertDiv" title="" style="display:none;">
+					  <p>{{ alertMessage }}</p><button v-on:click="hideAlert">Ok</button>
+					</div>					
+				</main>
+			</section>
+		</body>
+	</html>

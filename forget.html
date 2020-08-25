@@ -13,7 +13,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>	
     <script src="js/main.js"></script>	
-    <script src="js/login.js"></script>	
+    <script src="js/forgot.js"></script>	
 </head>
 <body>
     <div class="form-body without-side">
@@ -23,12 +23,12 @@
                     <div class="form-items" style="margin-top:-200px;">
 						<div><img src="img/icon.png" style="height:50px;"></div><br>
                         <div  id="v-login">
+			    <div> Enter your email you use to sign in </div>
                             <input v-model="email" type="text" name="username" placeholder="E-mail Address">
-                            <input v-model="password" type="password" name="password" placeholder="Password">
                             <div>
                                 <div class="form-button">
-                                    <button id="submit" type="submit" class="ibtn" v-on:click="login()">Login</button>
-				    <a href="forget.html">Forget password?</a>
+                                    <button id="submit" type="submit" class="ibtn" v-on:click="forgotPassword()">Submit</button>
+				    <a href="login.html">Go back</a>
                                 </div>                                
                             </div>
                         </div> 

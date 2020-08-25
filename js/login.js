@@ -3,25 +3,31 @@ $(window).on("load", function() {
     var vLogin = new Vue({
         el: '#v-login',
         data: {
-        email: '',
-        password: '',   
+      		email: '',
+        	password: '',   
         },
         methods:{
             login: function(){
-                alert(this.email+" "+this.password);
-                //this.authenticateUser(this.email,this.password)
+				this.authenticateUser(this.email, this.password);
             },			
-/*			
             authenticateUser: function(email,password){
-                firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-					window.location.href = 'login.html';
-                    console.log("error code: "+errorCode+" message: "+errorMessage);
-                  });
-            }   
-*/			
-        }
+				// if there's a successful login, save the user into a cookie and from the admin page, check
+				// if there exists a user in the cookie
+				//firebase.auth().createUserWithEmailAndPassword(email, password)
+                firebase
+					.auth()
+					.signInWithEmailAndPassword(email, password)
+					.then(function(user) {
+						// this is where I authorize
+						window.location.href = 'admin.html';
+					})
+					.catch(function(error) {
+						var errorCode = error.code;
+						var errorMessage = error.message;
+						console.log("error code: "+errorCode+" message: "+errorMessage);
+					});
+			}
+		}
     })
 
 });
